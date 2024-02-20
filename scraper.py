@@ -12,7 +12,9 @@ base_url = 'https://www.jumia.co.ke/all-products/?page={}#catalog-listing'
 starting_page = 1
 ending_page = 50
 
-
+base_url = 'https://www.jumia.co.ke/all-products/?page={}#catalog-listing'
+starting_page = 1
+ending_page = 50
 def scraper(url,starting_page,ending_page):
     product_list = []
     for page_num in range(starting_page,(ending_page+1)):
@@ -39,8 +41,10 @@ def scraper(url,starting_page,ending_page):
             print(f'Failed to retrieve page, {page_num}')
     
     csv_filename =  'C:/Users/Dell/Desktop/jumia_project/jumia_products.csv'
-    with open(csv_filename, 'w', encoding='utf-8') as csvfile:
+    with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['Item name', 'Current price', 'Old price', 'Discount', 'Link'])
         csv_writer.writerows(product_list)
-    return(f'Number of products scraped: {len(product_list)}')
+    return(print(f'Number of products scraped: {len(product_list)}'))
+            
+scraper(base_url,starting_page,ending_page)
