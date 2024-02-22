@@ -17,11 +17,9 @@ From the project, Exploratory Data Analysis(EDA) is perforemed on the dataset
 Clone this repository and install the required Python packages:
 
 ```
-{
 git clone https://github.com/IanDanielM/CitiBikeData-MongoDB.git
 cd CitiBikeData-MongoDB
 pip install -r requirements.txt
-}
 ```
 
 
