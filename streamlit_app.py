@@ -25,7 +25,7 @@ if df is not None:
         st.write(df.head())
 
         # displaying 10 most expensive productsand visualizing them
-        st.write('The 10 most expensive products currently are:')
+        st.subheader('Analysing the 10 most expensive products currently')
         top_expensive = df.sort_values(by='Current price', ascending=False).head(10)
         st.write(top_expensive)
 
@@ -44,7 +44,7 @@ if df is not None:
         st.pyplot(fig1)
 
         # top 10 highest discounted products
-        st.write('Here are the top 10 highest discointed products')
+        st.subheader('Analysing the 10 highest discointed products')
         top_discounted = df.sort_values(by='Discount', ascending=False).head(10)
         st.write(top_discounted)
 
