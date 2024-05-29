@@ -1,0 +1,4 @@
+jumia_project_venv/
+.gitignore/
+*.csv
+streamlit.cpython-312.pyc
