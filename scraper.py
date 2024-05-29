@@ -42,7 +42,7 @@ def scraper(url,starting_page,ending_page):
         else:
             print(f'Failed to retrieve page, {page_num}')
     # creating the csv file
-    csv_filename =  'C:/Users/Dell/Desktop/jumia_project/jumia_products.csv'
+    csv_filename =  'C:/Users/Dell/Desktop/jumia_project/jumia_products_raw.csv'
     with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(['Item name', 'Current price', 'Old price', 'Discount', 'Link']) # column names
